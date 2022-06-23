@@ -23,16 +23,33 @@
     <title>Frontend Mentor | Easybank landing page</title>
   </head>
   <body>
+    <div class="overlay mobile hidden">
+      <nav class="menu-box">
+        <a class="menuItem-mobile">Home</a>
+        <a class="menuItem-mobile">About</a>
+        <a class="menuItem-mobile">Contact</a>
+        <a class="menuItem-mobile">Blog</a>
+        <a class="menuItem-mobile">Careers</a>
+      </nav>
+    </div>
     <header>
       <img src="/images/logo.svg" class="logo-header" />
-      <nav class="menu-header">
+      <img
+        src="/images/icon-hamburger.svg"
+        class="menu-header mobile hamburgerIcon"
+      />
+      <img
+        src="/images/icon-close.svg"
+        class="closeIcon hidden menu-header mobile"
+      />
+      <nav class="menu-header desktop">
         <a class="menuItem-header">Home</a>
         <a class="menuItem-header">About</a>
         <a class="menuItem-header">Contact</a>
         <a class="menuItem-header">Blog</a>
         <a class="menuItem-header">Careers</a>
       </nav>
-      <button class="request-header">Request Invite</button>
+      <button class="request-header desktop">Request Invite</button>
     </header>
     <main>
       <section class="hero-section">
@@ -46,7 +63,8 @@
           <button class="reguest-heroSection">Request Invite</button>
         </div>
         <div class="image-one">
-          <img src="/images/bg-intro-desktop.svg" class="bgDesktop" />
+          <img src="/images/bg-intro-desktop.svg" class="bgDesktop desktop" />
+          <img src="/images/bg-intro-mobile.svg" class="bgMobile mobile" />
           <img src="/images/image-mockups.png" class="phonesImage" />
         </div>
       </section>
