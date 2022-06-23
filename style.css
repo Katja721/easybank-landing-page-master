@@ -1,7 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+body {
+  font-family: "Public Sans", sans-serif;
+  margin: 0;
+  font-size: 18px;
+  z-index: 1;
+}
+header {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.3fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "logo-header menu-header request-header";
+  padding: 1.5rem 8rem;
+  background-color: var(--white);
+  z-index: 4;
+  position: relative;
+}
+.menuItem-header {
+  margin: 0 1rem 0 0;
+}
+.logo-header {
+  grid-area: logo-header;
+}
+
+.menu-header {
+  grid-area: menu-header;
+  color: var(--grayish-blue);
+}
+
+.request-header {
+  grid-area: request-header;
+  width: fit-content;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1rem;
+
+  color: var(--white);
+  font-weight: 500;
+  background: rgb(49, 211, 92);
+  background: -moz-linear-gradient(
+    115deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    115deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  background: linear-gradient(
+    115deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#31d35c",endColorstr="#2bb7da",GradientType=1);
+}
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "text-one image-one";
+}
+
+.text-one {
+  grid-area: text-one;
+  margin: 0 0 0 8rem;
+}
+.heading-one {
+  color: var(--dark-blue);
+  font-size: 3em;
+  font-weight: 300;
+}
+.paragraph-one {
+  color: var(--grayish-blue);
+  width: 88%;
+}
+.image-one {
+  grid-area: image-one;
+}
+.bgDesktop {
+  width: 50%;
+  position: absolute;
+  left: 50rem;
+  top: -3rem;
+  z-index: 2;
+}
+.phonesImage {
+  position: absolute;
+  left: 54rem;
+  top: 0.5rem;
+  width: 40%;
+  z-index: 3;
+}
+
+.reguest-heroSection {
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1rem;
+  margin: 1rem 0;
+  color: var(--white);
+  font-weight: 500;
+  background: rgb(49, 211, 92);
+  background: -moz-linear-gradient(
+    115deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    115deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  background: linear-gradient(
+    115deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#31d35c",endColorstr="#2bb7da",GradientType=1);
+}
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "head-features"
+    "items-features";
+  padding: 5rem 8rem;
+  margin: 4rem 0;
+  background-color: var(--light-grayish-blue);
+}
+
+.head-features {
+  grid-area: head-features;
+}
+.heading-features {
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+.paragraph-features {
+  color: var(--grayish-blue);
+  width: 65%;
+  line-height: 1.5em;
+}
+.items-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 30px;
+  grid-auto-flow: row;
+  grid-template-areas: "feature1 feature2 feature3 feature4";
+  grid-area: items-features;
+}
+
+.feature1 {
+  grid-area: feature1;
+}
+
+.feature2 {
+  grid-area: feature2;
+}
+
+.feature3 {
+  grid-area: feature3;
+}
+
+.feature4 {
+  grid-area: feature4;
+}
+.feature-heading {
+  color: var(--dark-blue);
+  font-weight: 500;
+  margin: 2.5rem 0 1.5rem 0;
+}
+.feature-paragraph {
+  color: var(--grayish-blue);
+  font-weight: 300;
+  font-size: 0.9em;
+}
+.blog {
+  margin: 0 7rem;
+}
+.heading-blog {
+  margin: 3rem 1rem;
+  font-weight: 300;
+  color: var(--dark-blue);
+  font-size: 1.8em;
+}
+.blogPosts {
+  display: flex;
+}
+.post {
+  width: 25%;
+  margin: 0 1rem;
+}
+.blog-image {
+  width: 100%;
+  height: 40%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.author {
+  color: var(--grayish-blue);
+  font-size: 0.8em;
+}
+.post-heading {
+  color: var(--dark-blue);
+  font-weight: 300;
+  font-size: 0.95em;
+}
+.article {
+  font-weight: 300;
+  color: var(--grayish-blue);
+  font-size: 0.8em;
+}
+main {
+  background-color: var(--very-light-gray);
+}
+footer {
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+}
+.logo-footer {
+  color: var(--white);
+}
+.menu-footer {
+  color: var(--white);
+  display: flex;
+}
+.reguest-footer {
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.5rem;
+  width: fit-content;
+  color: var(--white);
+  font-weight: 500;
+  background: rgb(49, 211, 92);
+  background: -moz-linear-gradient(
+    115deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    115deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  background: linear-gradient(
+    115deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#31d35c",endColorstr="#2bb7da",GradientType=1);
+}
+.menu-one {
+  display: flex;
+  flex-direction: column;
+  margin: 0 4rem;
+  font-size: 0.8em;
+}
+.menu-two {
+  display: flex;
+  flex-direction: column;
+  margin: 0 6rem;
+  font-size: 0.8em;
+}
+.menuItem-footer {
+  margin: 0.5rem 0;
+}
+.social {
+  margin: 3.5rem 0 0 0;
+}
+.social-icon {
+  transform: scale(1.1);
+  margin: 0 0.3rem;
+}
+.part3-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.copyRights {
+  color: var(--grayish-blue);
+  font-size: 0.8em;
+  margin: 1.5rem 0;
 }
